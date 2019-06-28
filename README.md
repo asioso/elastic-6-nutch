@@ -53,7 +53,8 @@ add your writer configuration in /conf/index-writers.xml
 
 ## Use this plugin:
 
-enable it in nutch-site.xml
+enable it in nutch-site.xml, by using *indexer-elastic-6* in the plugin.includes property
+e.g.:
 
 ```
 <property>
