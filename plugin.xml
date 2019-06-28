@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<plugin id="indexer-elastic-6" name="ElasticIndexWriter6.7" version="1.0.0"
+  provider-name="nutch.apache.org">
+
+  <runtime>
+    <library name="indexer-elastic-6.jar">
+      <export name="*" />
+    </library>
+
+    <library name="commons-codec-1.10.jar"/>
+    <library name="commons-logging-1.1.3.jar"/>
+    <library name="httpasyncclient-4.1.2.jar"/>
+    <library name="httpclient-4.5.2.jar"/>
+    <library name="httpcore-4.4.5.jar"/>
+    <library name="httpcore-nio-4.4.5.jar"/>
+
+    <!-- ElasticSearch DEPENDENCIES-->
+    <library name="elasticsearch-6.7.2.jar"/>
+    <library name="elasticsearch-cli-6.7.2.jar"/>
+    <library name="elasticsearch-core-6.7.2.jar"/>
+    <library name="elasticsearch-rest-client-6.7.2.jar"/>
+    <library name="elasticsearch-secure-sm-6.7.2.jar"/>
+    <library name="elasticsearch-ssl-config-6.7.2.jar"/>
+    <library name="elasticsearch-x-content-6.7.2.jar"/>
+
+
+
+    <library name="compiler-0.9.3.jar"/>
+    <library name="HdrHistogram-2.1.9.jar"/>
+    <library name="hppc-0.7.1.jar"/>
+    <library name="jackson-core-2.8.11.jar"/>
+    <library name="jackson-dataformat-cbor-2.8.11.jar"/>
+    <library name="jackson-dataformat-smile-2.8.11.jar"/>
+    <library name="jackson-dataformat-yaml-2.8.11.jar"/>
+    <library name="jna-4.5.1.jar"/>
+    <library name="joda-time-2.10.1.jar"/>
+    <library name="jopt-simple-5.0.2.jar"/>
+    <library name="log4j-api-2.11.1.jar"/>
+    <library name="log4j-core-2.11.1.jar"/>
+    <library name="lucene-analyzers-common-7.7.0.jar"/>
+    <library name="lucene-backward-codecs-7.7.0.jar"/>
+    <library name="lucene-core-7.7.0.jar"/>
+    <library name="lucene-grouping-7.7.0.jar"/>
+    <library name="lucene-highlighter-7.7.0.jar"/>
+    <library name="lucene-join-7.7.0.jar"/>
+    <library name="lucene-memory-7.7.0.jar"/>
+    <library name="lucene-misc-7.7.0.jar"/>
+    <library name="lucene-queries-7.7.0.jar"/>
+    <library name="lucene-queryparser-7.7.0.jar"/>
+    <library name="lucene-sandbox-7.7.0.jar"/>
+    <library name="lucene-spatial3d-7.7.0.jar"/>
+    <library name="lucene-spatial-7.7.0.jar"/>
+    <library name="lucene-spatial-extras-7.7.0.jar"/>
+    <library name="lucene-suggest-7.7.0.jar"/>
+    <library name="securesm-1.1.jar"/>
+    <library name="snakeyaml-1.17.jar"/>
+    <library name="t-digest-3.2.jar"/>
+
+    <!-- ElasticSearch Transport jar Deps-->
+    <library name="percolator-client-6.7.2.jar"/>
+    <library name="reindex-client-6.7.2.jar"/>
+    <library name="lang-mustache-client-6.7.2.jar"/>
+    <library name="transport-6.7.2.jar"/>
+    <library name="transport-netty4-client-6.7.2.jar"/>
+    <library name="netty-buffer-4.1.32.Final.jar"/>
+    <library name="netty-codec-4.1.32.Final.jar"/>
+    <library name="netty-codec-http-4.1.32.Final.jar"/>
+    <library name="netty-common-4.1.32.Final.jar"/>
+    <library name="netty-handler-4.1.32.Final.jar"/>
+    <library name="netty-resolver-4.1.32.Final.jar"/>
+    <library name="netty-transport-4.1.32.Final.jar"/>
+    <library name="aggs-matrix-stats-client-6.7.2.jar"/>
+    <library name="parent-join-client-6.7.2.jar"/>
+    <library name="rank-eval-client-6.7.2.jar"/>
+
+
+
+  </runtime>
+
+  <requires>
+    <import plugin="nutch-extensionpoints" />
+  </requires>
+
+  <extension id="org.apache.nutch.indexer.elastic-6"
+    name="Elasticsearch 6.7 Index Writer"
+    point="org.apache.nutch.indexer.IndexWriter">
+    <implementation id="ElasticIndexWriter6"
+      class="org.apache.nutch.indexwriter.elastic_6.ElasticIndexWriter" />
+  </extension>
+
+</plugin>
