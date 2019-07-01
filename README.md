@@ -28,7 +28,7 @@ ant
 add your writer configuration in /conf/index-writers.xml
 
 ```xml
-<writer id="indexer_elastic_6_1" class="org.apache.nutch.indexwriter.elastic6.ElasticIndexWriter">
+<writer id="indexer_elastic_6_1" class="org.apache.nutch.indexwriter.elastic_6.ElasticIndexWriter">
     <parameters>
       <param name="host" value="0.0.0.0"/>
       <param name="port" value="9300"/>
