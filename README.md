@@ -5,7 +5,7 @@ this just updates the existing elastic indexer to work with ES 6.7 and NUTCH 1.x
 Dependencies were updated, namespace and class changes got fixed.
 
 # Install/Build
-put this source folder (indexer-elastic-6) into nutch's src/plugin directory
+put this source folder (elastic-6-nutch) into nutch's src/plugin directory
 
 
 ## build with nutch
