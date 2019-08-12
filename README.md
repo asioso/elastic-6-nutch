@@ -12,7 +12,7 @@ put this source folder (indexer-elastic-6) into nutch's src/plugin directory
 
 add this line to nutch's build.xml for all targets!
 ```xml
-<ant dir="indexer-elastic-6" target="deploy"/>
+<ant dir="elastic-6-nutch" target="deploy"/>
 ```
 
 build this plugin with nutch 
